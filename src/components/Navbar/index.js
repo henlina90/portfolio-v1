@@ -12,13 +12,13 @@ import {
   NavMenu,
 } from "./NavbarElements";
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">portfolio</NavLogo>
-          <MobileIcon>
+          <NavLogo to="/">LSH</NavLogo>
+          <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
@@ -26,15 +26,18 @@ const Navbar = () => {
               <NavLinks to="about">About</NavLinks>
             </NavItem>
             <NavItem>
+              <NavLinks to="experience">Experience</NavLinks>
+            </NavItem>
+            <NavItem>
               <NavLinks to="work">Work</NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks to="contact">Contact</NavLinks>
             </NavItem>
+            <NavBtn>
+              <NavBtnLink to="/">NavBtnLink</NavBtnLink>
+            </NavBtn>
           </NavMenu>
-          <NavBtn>
-            <NavBtnLink to="/"></NavBtnLink>
-          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>

@@ -3,8 +3,8 @@ import { Link as LinkS } from "react-scroll";
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  background-color: #fafafa;
-  color: #0a0a0a;
+  background-color: #f5f5f5;
+  color: #252422;
   height: 80px;
   // margin-top: -80px;
   display: flex;
@@ -31,7 +31,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-  color: #0a0a0a;
+  color: #252422;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -73,7 +73,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkS)`
-  color: #0a0a0a;
+  color: #252422;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -95,11 +95,11 @@ export const NavBtn = styled.nav`
   }
 `;
 export const NavBtnLink = styled(LinkR)`
-  border-radius: 50px;
-  background: #1c5d99;
+  border-radius: 30px;
+  background: #fed448;
   white-space: nowrap;
   padding: 10px 22px;
-  color: #fafafa;
+  color: #252422;
   font-size: 16px;
   outline: none;
   border: none;
@@ -109,7 +109,7 @@ export const NavBtnLink = styled(LinkR)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #eeeeee;
-    color: #0a0a0a;
+    background: #fde187;
+    color: #252422;
   }
 `;

@@ -10,20 +10,28 @@ import {
   SidebarWrapper,
 } from "./SidebarElements";
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, toggle }) => {
   return (
-    <SidebarContainer>
-      <Icon>
+    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+      <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about">About</SidebarLink>
-          <SidebarLink to="work">Work</SidebarLink>
-          <SidebarLink to="contact">Contact</SidebarLink>
+          <SidebarLink to="about" isOpen={isOpen} onClick={toggle}>
+            About
+          </SidebarLink>
+          <SidebarLink to="work" isOpen={isOpen} onClick={toggle}>
+            Work
+          </SidebarLink>
+          <SidebarLink to="contact" isOpen={isOpen} onClick={toggle}>
+            Contact
+          </SidebarLink>
         </SidebarMenu>
         <SidebarWrap>
-          <SidebarRoute to="/">Holla</SidebarRoute>
+          <SidebarRoute to="/" isOpen={isOpen} onClick={toggle}>
+            Holla
+          </SidebarRoute>
         </SidebarWrap>
       </SidebarWrapper>
     </SidebarContainer>
